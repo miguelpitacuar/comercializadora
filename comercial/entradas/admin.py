@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Bodega, UnidadMedida, Proveedor, Cliente,Entrada , EstadoFactura, FacturaEntrada, Salida,FacturaSalida, TipoFactura, Producto,TipoProducto
-
+from ventas.models import Venta
 @admin.register(TipoProducto)
 class TipoProductoAdmin(admin.ModelAdmin):
     list_display = ('nombre',)
@@ -87,6 +87,10 @@ class SalidaAdmin(admin.ModelAdmin):
 @admin.register(FacturaSalida)
 class FacturaSalidaAdmin(admin.ModelAdmin):
     list_display = ('salida', 'estado_factura','total_pagar')
+
+
+
+
 
 """
 @admin.register(FacturaSalida)

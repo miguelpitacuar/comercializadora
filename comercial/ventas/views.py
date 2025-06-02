@@ -1,5 +1,3 @@
 from django.shortcuts import render
-from .models import ventas
-
 
 # Create your views here.
