@@ -15,7 +15,7 @@ class TipoProducto(models.Model):
     descripcion = models.CharField(max_length=128)
 
     def _str_(self):
-        return f"{self.nombre} {self.descripcion}"
+        return f"{self.nombre}- {self.descripcion}"
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=50)
@@ -27,7 +27,7 @@ class Producto(models.Model):
     fecha_creacion = models.DateField(auto_now=True) 
 
     def __str__(self):
-        return f"{self.nombre} {self.tipo_producto} {self.bodega} {self.precio_compra} {self.precio_venta}"   
+        return self.nombre
 
 class TipoFactura(models.Model):
     nombre = models.CharField(max_length=50)  # bultos, kilos, toneladas
